@@ -1,0 +1,118 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+ 
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  /* Custom attribute */
+  :root{
+    /* Colours */
+    --Colour-card:hsl(0, 0%, 100%); 
+    --Colour-background:hsl(47, 88%, 63%);
+    --Colour-headingfont:hsl(0, 0%, 7%);  
+    --Colour-standardfont:hsl(0, 0%, 50%);  
+    /*--neutral3:
+    --neutral4:*/
+
+    /* Fonts */
+    --defaultFontSize:1rem;
+    /* --smallFontSize:calc(var(--defaultFontSize)/1.40625); font-size:0.8rem; */
+    --fontdefault:'Figtree', sans-serif;
+    --fontweight-large:800;
+    --fontweight-medium:600;
+    /* --fontweight-small:400; */
+
+    /* Padding & Margin */
+    --defaultMarginPadding:1.5rem;
+  }
+  .attribution { font-size: 11px; text-align: center; }
+  .attribution a { color: hsl(228, 45%, 44%); }
+
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+
+    font-family: var(--fontdefault);
+    font-size:var(--defaultFontSize); 
+    background-color: var(--Colour-background);
+    font-weight: var(--fontweight-medium);
+    /* width:375px;
+    border:solid    */
+  }
+  main{
+    
+    height: calc(100vh - 1.031rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+  }
+  article{
+    max-width: 23.438rem;
+    margin:var(--defaultMarginPadding);
+    padding:var(--defaultMarginPadding);
+    background-color: var(--Colour-card);
+    border-radius: 1rem;
+    border:solid black 2px;
+    display:flex;
+    flex-direction: column;
+    gap:calc(var(--defaultMarginPadding)*0.5);
+    box-shadow: 0.5rem 0.5rem;
+  }
+  .illustrativeImage {
+    border-radius: 10px;
+    overflow: auto;
+    height:12.2rem;
+    object-fit:cover;
+    margin-bottom:1rem;
+  }
+  .author {
+    display:flex;
+    align-items: center;
+    gap:calc(var(--defaultMarginPadding)/2);
+    font-weight: var(--fontweight-large);
+  }
+  .author img {
+    height:2rem;
+  }
+  h2 {
+    font-weight: var(--fontweight-large);
+    font-size: var(--defaultFontSize);
+  }
+  .learning {
+    background-color: var(--Colour-background);
+    border-radius: 5px;
+    width: fit-content;
+    padding: 0 calc(var(--defaultMarginPadding)/2);
+  }
+  h1 {
+    font-size: calc(var(--defaultFontSize)*1.2);
+    font-weight: var(--fontweight-large);
+  }
+  h1:is(:hover, :focus){
+    color:var(--Colour-background);
+    cursor: pointer;
+    cursor:url(./assets/images/blackcursor4.png),pointer;
+  }
+
+  .infoParragraph {
+    color:var(--Colour-standardfont);
+  }
+
