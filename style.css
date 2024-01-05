@@ -57,7 +57,7 @@
   }
   main{
     
-    height: calc(100vh - 1.031rem);
+    min-height: calc(100vh - 1.031rem);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,5 +114,26 @@
 
   .infoParragraph {
     color:var(--Colour-standardfont);
+  }
+
+  @media (orientation: landscape){
+    article{
+      max-width: 700px;
+      display:grid;
+      grid-template-columns: auto 1fr;
+    }
+    article > div:first-of-type {
+      
+      grid-row: 1 / 6 ;
+    }
+    .illustrativeImage{
+      height:100%;
+    }
+    /* article > img{
+      grid-row: span 2;
+     } */
+    
+    /* article > p:first-of-type {
+      grid-column-start: 2; */
   }
 
